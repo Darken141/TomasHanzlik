@@ -5,6 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  position: relative;
+  z-index: -999;  
+}
+
+#root{
+  position: relative;
+  z-index: -999;
 }
 
 code {
