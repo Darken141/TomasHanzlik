@@ -6,7 +6,9 @@ const TodoItem = (props) => (
     <tr className='todo-item'>
         <td className="todo-time">{props.time}</td>
         <td className="todo-text">{props.text}</td>
-        <td className='todo-delete'>X</td>
+        <td className='todo-delete'>
+            <i className="far fa-trash-alt"></i>
+        </td>
     </tr>
 )
 

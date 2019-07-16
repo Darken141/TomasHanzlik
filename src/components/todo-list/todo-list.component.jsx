@@ -1,17 +1,14 @@
 import React from 'react'
 
+import TodoInput from '../todo-input/todo-input.component';
 import TodoItem from '../todo-item/todo-item.component';
 
 import './todo-list.styles.scss'
 
 const TodoList = (props) => (
     <div className='todo-list'>
-        <input 
-            className='todo-input' 
-            type='text' 
-            placeholder='Vlozte text stlacenm klavesy "Enter"'
-            onKeyPress={(e) => console.log(e)}
-        />  
+        <TodoInput/>
+
 
         <table className="todo-table" cellSpacing="0">
             <tbody className='table-body'>

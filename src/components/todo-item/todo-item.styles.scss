@@ -15,6 +15,9 @@
 
     & .todo-delete {
         display: none;
+        background-color: #d91e18;
+        border-radius: 5px;
+        padding: 5px;
     }
 
     &:hover .todo-delete {
