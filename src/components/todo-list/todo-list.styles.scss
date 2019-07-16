@@ -1,0 +1,40 @@
+.todo-list {
+    display: flex;
+    flex-direction: column-reverse;
+    background-color: rgba( 0, 0, 0, .2 );
+    width: 30%;
+    box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 );
+    margin-top: 4rem;
+    padding: 15px;
+
+    & .todo-table {
+        margin: 0 auto;
+        font-size: .875rem;
+        width: 100%;
+        max-width: 64rem;
+
+        & .table-body {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+
+    & .todo-input {
+        background-color: rgba( 0, 0, 0, .2 );
+        border-radius: 25px;
+        padding: 1rem;
+        width: 100%;
+        color: #fff;
+        height: 10px;
+        margin-top: 15px;
+        outline: none;
+    }
+}
+
+@media all and (max-width: 980px) {
+    .todo-list {
+        flex-direction: row;
+        margin: 0 auto;
+        width: 100%;
+    }
+}

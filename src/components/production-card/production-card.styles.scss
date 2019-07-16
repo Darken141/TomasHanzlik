@@ -10,6 +10,7 @@
     flex-direction: column;
     z-index: 5;
     overflow: hidden;
+    transition: all 0.8 ease-out;
 
     &:hover {
         cursor: pointer;
@@ -32,6 +33,14 @@
             z-index: 10;
             opacity: 1;
             background-color: rgba(0, 0, 0, 0.40);
+            transition: all 0.8 ease-out;
+        }
+
+        .card-content{
+            opacity: 1;
+        }
+        .card-text {
+            display: block;
         }
     }
 
@@ -80,6 +89,7 @@
 
 .production-link {
     text-decoration: none;
+    outline: none;
     position: relative;
     z-index: 15;
 }

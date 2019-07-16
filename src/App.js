@@ -1,15 +1,17 @@
 import React from 'react';
+import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
-import HomePage from './pages/homepage/homepage.component'
+import HomePage from './pages/homepage/homepage.component';
+import VideoEditor from './pages/video-editor/videopage.component';
 
 function App() {
   return (
-    <div style={{
-      position: 'relative',
-      zIndex: '-999'
-    }}>
-      <HomePage/>
+    <div className='App'>
+      <Switch>
+        <Route exact path='/' component={HomePage}/>
+        <Route exact path='/video/:id' component={VideoEditor}/>
+      </Switch>
     </div>
   );
 }

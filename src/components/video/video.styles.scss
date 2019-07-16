@@ -1,0 +1,24 @@
+.video-component {
+    margin-top: 4rem;
+    width: 70%;
+    box-shadow: 4px 4px 8px 0 rgba( 0, 0, 0, .2 );
+
+    .player-wrapper {
+        position: relative;
+        padding-top: 56.25%; /* Player ratio: 100 / (1280 / 720) */
+    
+        & .react-player {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }  
+    }
+
+}
+
+@media all and (max-width: 980px) {
+    .video-component {
+        width: 100%;
+    }
+}
+   

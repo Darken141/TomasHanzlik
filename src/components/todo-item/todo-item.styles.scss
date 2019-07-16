@@ -1,0 +1,23 @@
+.todo-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    & .todo-time {
+        display: flex;
+        justify-content: center;
+        padding: 15px 9px;
+    }
+
+    & .todo-text {
+        padding: 5px 9px;
+    }
+
+    & .todo-delete {
+        display: none;
+    }
+
+    &:hover .todo-delete {
+        display: block;
+    }
+}
