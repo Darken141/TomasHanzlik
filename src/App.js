@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import './App.css';
 
 import HomePage from './pages/homepage/homepage.component';
+import DashBoard from './pages/dashboardpage/dashboard.component';
 import VideoEditor from './pages/video-editor/videopage.component';
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
     <div className='App'>
       <Switch>
         <Route exact path='/' component={HomePage}/>
-        <Route exact path='/video/:id' component={VideoEditor}/>
+        <Route path='/admin' component={DashBoard}/>
+        <Route path='/video/:id' component={VideoEditor}/>
       </Switch>
     </div>
   );
