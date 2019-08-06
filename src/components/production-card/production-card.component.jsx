@@ -19,7 +19,7 @@ const ProductionCard = (props) => {
         hidden: { opacity: 0, y: 100 },
       }
 
-      const hover = { display: 'block', opacity: 1, x: 0 }
+      const hover = { opacity: 1, y: 0 }
 
     return (        
         <a 
@@ -52,22 +52,23 @@ const ProductionCard = (props) => {
                     initial={{opacity:0}}
                     animate={{ opacity: .5, backgroundColor: '#000'}}
                 />
-                <motion.div 
-                    className="card-content"
-                    initial="hidden"                    
-                >
-                    <motion.h1 
+                
+                <motion.h1 
                         className='card-title'
-                        variants={items}
+                        initial={{ opacity: 0, x: 100}}
+                        animate={{ opacity: 1, x: 0}}
                         transition={{duration: 2}}
                     >
                             {props.name}
                     </motion.h1>
+                <motion.div 
+                    className="card-content"
+                    initial={{ opacity: 0, y: 0}} 
+                    whileHover={{ opacity: 1, y: 0}} 
+                    transition={{ duration: 1.5}}                  
+                >
                     <motion.p 
                         className='card-text'
-                        initial={{ display: 'none', opacity: 0, x: 100}}
-                        animate={hover}
-                        transition={{delay: 2, duration: 3}}
                     >
                             {props.text}
                     </motion.p>
