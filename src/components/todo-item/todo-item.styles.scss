@@ -1,26 +1,32 @@
 .todo-item {
+    position: relative;
     display: flex;
-    flex-direction: row;
+    justify-content: center;
     align-items: center;
+    width: 100%;
+    border-bottom: 1px solid white;
 
-    & .todo-time {
+    .todo-time {
+        width: 50px;
         display: flex;
         justify-content: center;
-        padding: 15px 9px;
+        padding: 10px 9px;
+        border-right: 1px solid white;
     }
 
-    & .todo-text {
-        padding: 5px 9px;
+    .todo-text {
+        display: flex;
+        word-break: break-all;
+        padding: 10px 9px;
+        width: 180px;
     }
 
-    & .todo-delete {
-        display: none;
+    .todo-delete {
         background-color: #d91e18;
-        border-radius: 5px;
-        padding: 5px;
+        padding: 10px 10px;
     }
 
     &:hover .todo-delete {
-        display: block;
+        cursor: pointer;
     }
 }

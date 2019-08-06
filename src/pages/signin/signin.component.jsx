@@ -17,8 +17,8 @@ const particlesOption = {
   }
 
 class SignIn extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             username: '',
             password: ''
@@ -47,6 +47,7 @@ class SignIn extends React.Component {
                             className="signin-btn" 
                             type="submit" 
                             value="Prihlásiť sa" 
+                            onClick={this.props.handleLogIn}
                             />
                         </div>
                     </div>

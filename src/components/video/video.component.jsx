@@ -12,8 +12,8 @@ const Video = (props) => (
                 width='100%'
                 height='100%'
                 controls={true}
-                onDuration={props.handleVideoDuration}
-                onProgress={props.handleVideoProgress}
+                onDuration={props.getVideoDuration}
+                onProgress={(e) => console.log(e)}
                 playing={props.isPlaying}
             />
         </div>

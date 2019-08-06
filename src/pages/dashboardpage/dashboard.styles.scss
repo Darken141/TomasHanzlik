@@ -1,4 +1,20 @@
 .dashboard {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    color: #fff;
     position: relative;
     z-index: -999;
+    background: rgb(0,0,0);
+    background: -moz-linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(63,63,63,1) 71%, rgba(80,80,80,1) 100%);
+    background: -webkit-linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(63,63,63,1) 71%, rgba(80,80,80,1) 100%);
+    background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(63,63,63,1) 71%, rgba(80,80,80,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#505050",GradientType=1);
+
+    display: grid;
+    grid-template-areas: 'M D';
+    
+    .dash-container {
+        grid-area: D;
+    }
 }

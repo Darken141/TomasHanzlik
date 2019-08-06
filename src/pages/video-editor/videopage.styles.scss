@@ -1,36 +1,39 @@
-.video-editor {
-    width: 100%;
-    min-height: 100vh;
-    height: auto;
-    position: relative;
-    z-index: -800;
+.video-section {
+    overflow-y: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
     background: rgb(0,0,0);
     background: -moz-linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(63,63,63,1) 71%, rgba(80,80,80,1) 100%);
     background: -webkit-linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(63,63,63,1) 71%, rgba(80,80,80,1) 100%);
     background: linear-gradient(270deg, rgba(0,0,0,1) 0%, rgba(63,63,63,1) 71%, rgba(80,80,80,1) 100%);
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#505050",GradientType=1);
-    
     color: #fff;
-
-    & .video-container {
-        margin: 0 auto;
+    
+    .container {
+        position: relative;
+        width: 95%;
+        height: 95%;
         display: flex;
-        justify-content: center;
-        width: 80%;
+        align-items: center;
+        background-color: rgba( 0, 0, 0, .5 );
+        box-shadow: 0px 0px 12px 0 rgba(255, 255, 255, 0.8);
     }
-}
 
-.particles {
-    position: fixed;
-    z-index: -9999;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-}
-
-@media all and (max-width: 980px) {
-    .video-container {
-        flex-direction: column;
+    .todolist {
+        height: 100%;
+        overflow-y: scroll;
+        border: 1px solid white;
+    }
+    
+    .list {
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: flex-end;
     }
 }

@@ -1,0 +1,17 @@
+.dashboard-settings {
+    height: 90%;
+    padding: 20px 80px;
+
+    .settings-background-img{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .background-img-input {
+            background: none;
+            color: white;
+            margin: 7px 0;
+            padding: 7px;
+        }
+    }
+}

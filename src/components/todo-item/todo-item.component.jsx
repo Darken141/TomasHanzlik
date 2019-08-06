@@ -1,15 +1,27 @@
 import React from 'react'
+import { motion } from 'framer-motion';
 
 import './todo-item.styles.scss'
 
+import { FaTrashAlt } from 'react-icons/fa'
+
+
 const TodoItem = (props) => (
-    <tr className='todo-item'>
-        <td className="todo-time">{props.time}</td>
-        <td className="todo-text">{props.text}</td>
-        <td className='todo-delete'>
-            <i className="far fa-trash-alt"></i>
-        </td>
-    </tr>
+    <motion.div 
+        className='todo-item'
+        animate={{ transition: { ease: 'easeOut', duration: 1}}}
+    >
+        <div className="todo-time">{props.time}</div>
+        <div className="todo-text">{props.text}</div>
+        <motion.div 
+            className='todo-delete'
+            initial={{opacity: 0}}
+            whileHover={{opacity: 1, x: 0}}
+            onClick={props.handleCLickDelButton}
+        >
+            <FaTrashAlt/>
+        </motion.div>
+    </motion.div>
 )
 
 export default TodoItem;
