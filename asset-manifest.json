@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/TomasHanzlik/static/css/main.ce442ada.chunk.css",
-    "main.js": "/TomasHanzlik/static/js/main.fc42ecd0.chunk.js",
-    "main.js.map": "/TomasHanzlik/static/js/main.fc42ecd0.chunk.js.map",
-    "runtime~main.js": "/TomasHanzlik/static/js/runtime~main.7a0c1974.js",
-    "runtime~main.js.map": "/TomasHanzlik/static/js/runtime~main.7a0c1974.js.map",
-    "static/js/2.a589b243.chunk.js": "/TomasHanzlik/static/js/2.a589b243.chunk.js",
-    "static/js/2.a589b243.chunk.js.map": "/TomasHanzlik/static/js/2.a589b243.chunk.js.map",
-    "index.html": "/TomasHanzlik/index.html",
-    "precache-manifest.aa3f997b0ce78225a995cf79c48d7f6f.js": "/TomasHanzlik/precache-manifest.aa3f997b0ce78225a995cf79c48d7f6f.js",
-    "service-worker.js": "/TomasHanzlik/service-worker.js",
-    "static/css/main.ce442ada.chunk.css.map": "/TomasHanzlik/static/css/main.ce442ada.chunk.css.map",
-    "static/media/hanzlik_compress.jpg": "/TomasHanzlik/static/media/hanzlik_compress.92830eed.jpg",
-    "static/media/pozadie_compress.jpg": "/TomasHanzlik/static/media/pozadie_compress.eb38b98b.jpg",
-    "static/media/stuzkova-v3-compress.jpg": "/TomasHanzlik/static/media/stuzkova-v3-compress.4af9038e.jpg",
-    "static/media/svadobna_compress.jpg": "/TomasHanzlik/static/media/svadobna_compress.7a14aa44.jpg",
-    "static/media/visuals_compress.png": "/TomasHanzlik/static/media/visuals_compress.786e3b0f.png"
+    "main.css": "/tomashanzlik-final/static/css/main.ce442ada.chunk.css",
+    "main.js": "/tomashanzlik-final/static/js/main.0073ac00.chunk.js",
+    "main.js.map": "/tomashanzlik-final/static/js/main.0073ac00.chunk.js.map",
+    "runtime~main.js": "/tomashanzlik-final/static/js/runtime~main.89b7b771.js",
+    "runtime~main.js.map": "/tomashanzlik-final/static/js/runtime~main.89b7b771.js.map",
+    "static/js/2.a589b243.chunk.js": "/tomashanzlik-final/static/js/2.a589b243.chunk.js",
+    "static/js/2.a589b243.chunk.js.map": "/tomashanzlik-final/static/js/2.a589b243.chunk.js.map",
+    "index.html": "/tomashanzlik-final/index.html",
+    "precache-manifest.f3ac22ffc10e4a394348440312e69b7a.js": "/tomashanzlik-final/precache-manifest.f3ac22ffc10e4a394348440312e69b7a.js",
+    "service-worker.js": "/tomashanzlik-final/service-worker.js",
+    "static/css/main.ce442ada.chunk.css.map": "/tomashanzlik-final/static/css/main.ce442ada.chunk.css.map",
+    "static/media/hanzlik_compress.jpg": "/tomashanzlik-final/static/media/hanzlik_compress.92830eed.jpg",
+    "static/media/pozadie_compress.jpg": "/tomashanzlik-final/static/media/pozadie_compress.eb38b98b.jpg",
+    "static/media/stuzkova-v3-compress.jpg": "/tomashanzlik-final/static/media/stuzkova-v3-compress.4af9038e.jpg",
+    "static/media/svadobna_compress.jpg": "/tomashanzlik-final/static/media/svadobna_compress.7a14aa44.jpg",
+    "static/media/visuals_compress.png": "/tomashanzlik-final/static/media/visuals_compress.786e3b0f.png"
   }
 }
