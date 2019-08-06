@@ -2,7 +2,7 @@
   "name": "final_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Darken141/TomasHanzlik",
+  "homepage": "https://darken141.github.io/TomasHanzlik/",
   "dependencies": {
     "framer-motion": "^1.5.0",
     "gh-pages": "^2.1.0",
@@ -18,7 +18,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "predeploy": "yarn run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
