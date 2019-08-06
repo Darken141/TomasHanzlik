@@ -9,18 +9,7 @@ const ProductionCard = (props) => {
         visible: { opacity: 1 },
     }
 
-    const list = {
-        visible: { opacity: 1 },
-        hidden: { opacity: 0 },
-      }
-      
-      const items = {
-        visible: { opacity: 1, y: 0 },
-        hidden: { opacity: 0, y: 100 },
-      }
-
-      const hover = { opacity: 1, y: 0 }
-
+    
     return (        
         <a 
             className='production-link' 
