@@ -6,3 +6,9 @@
     position: relative;
     z-index: 2;
 }
+
+@media all and (max-width: 680px) {	
+    .production-list{	
+        flex-direction: column;	
+    }
+}

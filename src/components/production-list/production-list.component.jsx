@@ -2,14 +2,14 @@ import React from 'react';
 import { isMobile } from 'react-device-detect';
 
 import ProductionCard from '../production-card/production-card.component';
-
+import MobileProductionCard from '../mobile-production-card/mobile-production-card';
 
 import './production-list.styles.scss';
 
 const ProductionList = ( props ) => {
     if(isMobile){
         return (
-            <div style={{color: 'white'}}>Mobile Version is under construction</div>
+            <MobileProductionCard/>
         )
     } else {
         return (
