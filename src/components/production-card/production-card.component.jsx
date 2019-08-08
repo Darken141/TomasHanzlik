@@ -6,7 +6,6 @@ import './production-card.styles.scss';
 const ProductionCard = (props) => {
     
     return (      
-
         <motion.div 
             className="production-card"
             initial={{ opacity: 0 }}
