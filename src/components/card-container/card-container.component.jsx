@@ -29,10 +29,17 @@ const CardContainer = ( props ) => {
                     {production.production.text}
                 </p>
             </div>
-            <button className='btn'>Preisť na web</button>
+            <motion.a 
+                    className='btn' 
+                    rel="noopener noreferrer" 
+                    href={production.production.url} 
+                    target="_blank"
+            >
+                Preisť na web
+            </motion.a>
             <h3 className='title'>Ukážka</h3>
             <div className='sample'>
-                <Video video={'https://www.youtube.com/watch?v=l4qVw8OxjHc'} />
+                <Video video={production.production.video} />
             </div>
         </div>
     </motion.div>

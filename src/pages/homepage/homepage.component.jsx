@@ -27,28 +27,32 @@ class HomePage extends React.Component {
                     name: 'Hanzlik.sk',
                     text: "Hlavná a zároveň všeobecne zameraná produkcia na tvorenie videoklipov, reklamných videi, aftermovie's a podobne zameraných videí.",
                     img: hanzlik_sk,
-                    url: 'http://hanzlik.sk/'
+                    url: 'http://hanzlik.sk/',
+                    video: 'https://www.youtube.com/watch?v=l4qVw8OxjHc'
                 },
                 {
                     id: 2,
                     name: 'Stužková produkcia',
                     text: "Produkcia zameraná na tvorbu profesionálnych videí zo Stužkových slávností. Produkcia poskytuje rôzne balíčky pre študentov.",
                     img: stuzkova,
-                    url: 'http://hanzlik.sk/'
+                    url: 'http://hanzlik.sk/',
+                    video: 'https://vimeo.com/306579567'
                 },
                 {
                     id: 3,
                     name: 'Svadobná produkcia',
                     text: "Produkcia zameraná na tvorbu profesionálnych svadobných videí. Produkcia disponuje rozsiahlym tímom kameramanov.",
                     img: svadobna,
-                    url: 'http://svadobnaprodukcia.sk/'
+                    url: 'http://svadobnaprodukcia.sk/',
+                    video: 'https://vimeo.com/307993308'
                 },
                 {
                     id: 4,
                     name: 'Visuals for sale',
                     text: "Produkcia zameraná na tvorbu a predaj vizuálov a 'one take' videoklipov.",
                     img: visuals,
-                    url: 'https://www.instagram.com/visualsforsale/?fbclid=IwAR1EA4kAXCKIMJn5bSt72v7vwMDu0FjxFtQNi9XhHk1myfT_RWf6gIp3qv4'
+                    url: 'https://www.instagram.com/visualsforsale/?fbclid=IwAR1EA4kAXCKIMJn5bSt72v7vwMDu0FjxFtQNi9XhHk1myfT_RWf6gIp3qv4',
+                    video: ''
                 }
             ]
         }
