@@ -1,28 +1,19 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { connect } from 'react-redux';
-import { toggleProductionContainer } from '../../redux/production/production.actions';
+import { openProductionContainer } from '../../redux/production/production.actions';
 
 import './production-card.styles.scss';
 
-class ProductionCard extends React.Component {
-    constructor(props, {toggleProductionContainer}){
-        super(props, {toggleProductionContainer})
+const ProductionCard = (props) => {
 
-        this.state = {
-            showComponent: false
-        }
-    }
-
-
-    render() {
         return (      
             <motion.div 
-                onClick={this.props.toggleProductionContainer}
+                onClick={() => props.openProductionContainer(props)}
                 className="production-card"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
-                transition={{duration:1.5}}
+                transition={{duration: 1}}
                 whileHover={{ 
                     scale: 1.1, 
                     boxShadow: '0px 0px 15px #fff'
@@ -31,23 +22,23 @@ class ProductionCard extends React.Component {
                 <div 
                     className='production-image'
                     style={{
-                        backgroundImage: `url(${this.props.imgUrl})`
+                        backgroundImage: `url(${props.img})`
                     }}
                 /> 
                 <motion.div 
                     className='hover-background' 
                     initial={{opacity:0}}
                     animate={{ opacity: .5, backgroundColor: '#000'}}
-                    transition={{duration: 1.5}}
+                    transition={{duration: 1}}
                 />
                     
                 <motion.h1 
                     className='card-title'
-                    initial={{ opacity: 0, y: -100}}
-                    animate={{ opacity: 1, y: 0}}
-                    transition={{duration: 1.5}}
+                    initial={{ opacity: 0}}
+                    animate={{ opacity: 1}}
+                    transition={{delay: 0.5, duration: 1.5}}
                 >
-                    {this.props.name}
+                    {props.name}
                 </motion.h1>
                 <motion.div 
                     className="card-content"
@@ -55,21 +46,20 @@ class ProductionCard extends React.Component {
                     whileHover={{ opacity: 1}} 
                     transition={{ duration: 1.5}}    
                 >
-    
                     <motion.p 
                         className='card-text'
                     >
-                        {this.props.text}
+                        {props.text}
                     </motion.p>
                 </motion.div>
             </motion.div>
                     
         )
     }
-}
+
             
 const mapDispatchToProps = dispatch => ({
-    toggleProductionContainer: () => dispatch(toggleProductionContainer())
+    openProductionContainer: (production) => dispatch(openProductionContainer(production))
 })
 
 export default connect(null, mapDispatchToProps)(ProductionCard);

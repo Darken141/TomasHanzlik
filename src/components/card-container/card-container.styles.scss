@@ -1,7 +1,69 @@
 .card-container {
-    position: absolute;
-    width: 80%;
-    height: 80vh;
-    background-color: darkgray;
+    max-width: 500px;
+    margin: 25px 17px;
+    position: relative;
+    background-color: rgb(31, 26, 24);
+    border: 1px solid #fff;
     z-index: 100;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 25px;
+
+    .close-btn{
+        font-size: 13px;
+        position: absolute;
+        right: 25px;
+        top: 15px;
+        cursor: pointer;
+        border-bottom: 1px solid #fff;
+
+        &:hover {
+            color: gray;
+            border-color: gray;
+        }
+    }
+
+    .title {
+        text-align: center;
+        font-weight: lighter;
+        letter-spacing: 1.7px;
+        display: inline;
+    }
+    
+    .production {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .desc {
+            display: flex;
+            background-color: rgb(44, 37, 35);
+            border-radius: 15px;
+            padding: 5px 15px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            letter-spacing: 0.7px;
+            font-size: 15px;
+        }
+
+        .btn {
+            cursor: pointer;
+            width: 150px;
+            margin-bottom: 2rem;
+            padding: 15px 0;
+            border: 1px solid white;
+            background-color: rgb(31, 26, 24);
+            color: white;
+
+            &:hover {
+                background-color: rgb(66, 57, 55);
+            }
+        }
+
+        .sample {
+            width: 100%;
+        }
+    }
 }

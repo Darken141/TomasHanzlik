@@ -1,5 +1,10 @@
 import { ProductionActionTypes } from './production.types';
 
-export const toggleProductionContainer = () => ({
-    type: ProductionActionTypes.TOGGLE_CARD_CONTAINER
+export const closeProductionContainer = () => ({
+    type: ProductionActionTypes.CLOSE_PRODUCTION_CONTAINER
+})
+
+export const openProductionContainer = production => ({
+    type: ProductionActionTypes.OPEN_PRODUCTION_CONTAINER,
+    payload: production
 })
