@@ -1,6 +1,10 @@
 import React from 'react';
+import { connect } from 'react-redux';
+import { toggleProductionContainer } from '../../redux/production/production.actions';
 
 import ProductionList from '../../components/production-list/production-list.component';
+import CardContainer from '../../components/card-container/card-container.component';
+
 
 //background image
 import backGroundImg from '../../images/pozadie_compress.jpg';
@@ -14,8 +18,8 @@ import visuals from '../../images/visuals_compress.png';
 import './homepage.styles.scss'
 
 class HomePage extends React.Component {
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state = {
             backgroundImg: backGroundImg,
             productions: [
@@ -52,14 +56,24 @@ class HomePage extends React.Component {
     }
 
     render() {
+        console.log(this.props)
         return (
             <div className='homepage' style={{
                 backgroundImage: `url(${backGroundImg})`
             }}>
-                <ProductionList productions={this.state.productions} />
+            {
+                this.props.production.hidden
+                ? <ProductionList productions={this.state.productions} />
+                : <CardContainer />
+            }
             </div>
         )
     }
 }
 
-export default HomePage;
+const mapStateToProps = ({production}) => ({
+    production: production
+})
+
+
+export default connect(mapStateToProps)(HomePage);
