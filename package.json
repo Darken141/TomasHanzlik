@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://darken141.github.io/tomashanzlik-final/",
   "dependencies": {
+    "firebase": "^6.3.5",
     "framer-motion": "^1.5.0",
     "gh-pages": "^2.1.0",
     "node-sass": "^4.12.0",

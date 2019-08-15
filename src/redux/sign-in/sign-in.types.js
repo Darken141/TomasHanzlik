@@ -1,0 +1,4 @@
+export const SignInActionTypes = ({
+    CHANGE_EMAIL_INPUT: 'CHANGE_EMAIL_INPUT',
+    CHANGE_PASSWORD_INPUT: 'CHANGE_PASSWORD_INPUT'
+})

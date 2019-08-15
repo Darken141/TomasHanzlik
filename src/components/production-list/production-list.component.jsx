@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux';
 
 import ProductionCard from '../production-card/production-card.component';
 
@@ -6,22 +7,26 @@ import ProductionCard from '../production-card/production-card.component';
 import './production-list.styles.scss';
 
 const ProductionList = ( props ) => {
+    const { productions } = props.production; 
     return (
         <div className='production-list'>
             <div className='production-list-row'>
-                <ProductionCard key={props.productions[0].id} {...props.productions[0]} />
-                <ProductionCard key={props.productions[1].id} {...props.productions[1]} />
+                <ProductionCard key={productions[0].id} {...productions[0]} />
+                <ProductionCard key={productions[1].id} {...productions[1]} />
             </div>
             <div className='production-list-row'>
-                <ProductionCard key={props.productions[2].id} {...props.productions[2]} />
-                <ProductionCard key={props.productions[3].id} {...props.productions[3]} />
+                <ProductionCard key={productions[2].id} {...productions[2]} />
+                <ProductionCard key={productions[3].id} {...productions[3]} />
             </div>
         </div>
     )
 }
 
+const mapStateToProps = ({ production }) => ({
+    production: production
+})
 
-export default ProductionList;
+export default connect(mapStateToProps)(ProductionList);
 
 /*
 <div className='production-list-row'>

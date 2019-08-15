@@ -9,6 +9,16 @@
     background-size: cover;
     background-position: center;
     z-index: -1;
+
+    .log-off-btn {
+        position: absolute;
+        color: #fff;
+        z-index: 999;
+        top: 17px;
+        right: 35px;
+        padding: 13px;
+        background-color: #000;
+    }
 }
 
 .homepage::after{
