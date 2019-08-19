@@ -24,12 +24,7 @@ const CardContainer = ({ closeProductionContainer, production }) => {
                 transition={{duration: 1}}
                 className='card-container' 
             >
-                <span 
-                    className='close-btn'
-                    onClick={closeProductionContainer}
-                >
-                    Zatvoriť
-                </span>
+                
                 <h1 className='title'>{production.name}</h1>
                 <div className='production'>
                     <div className='desc'>
