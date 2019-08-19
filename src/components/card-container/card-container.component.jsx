@@ -25,7 +25,7 @@ const CardContainer = ({ closeProductionContainer, production }) => {
                 className='card-container' 
             >
                 
-                <h1 className='title'>{production.name}</h1>
+                <h2 className='title'>{production.name}</h2>
                 <div className='production'>
                     <div className='desc'>
                         <p>

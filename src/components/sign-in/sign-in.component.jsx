@@ -24,8 +24,8 @@ const SignIn = ({email, password, changeEmailInput, changePasswordInput}) => {
     
     return (
         <div className='sign-in'>
-            <h2>Sign in</h2>
-            <span>Sign in with your email and password</span>
+            <h2 className='title'>Sign in</h2>
+            <span className='title-sec'>Sign in with your email and password</span>
             <form onSubmit={handleSubmit}>
                 <FormInput
                     name='email'

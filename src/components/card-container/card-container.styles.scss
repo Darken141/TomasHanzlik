@@ -12,7 +12,7 @@
 }
 
 .card-container {
-    max-width: 500px;
+    max-width: 50rem;
     position: absolute;
     background-color: rgb(31, 26, 24);
     border: 1px solid #fff;
@@ -21,13 +21,13 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px 25px;
+    padding: 5rem 2.5rem;
 
     .close-btn{
-        font-size: 13px;
+        font-size: 1.3rem;
         position: absolute;
-        right: 25px;
-        top: 15px;
+        right: 2.5rem;
+        top: 1.5rem;
         cursor: pointer;
         border-bottom: 1px solid #fff;
 
@@ -39,6 +39,7 @@
 
     .title {
         text-align: center;
+        font-size: 2.2rem;
         font-weight: lighter;
         letter-spacing: 1.7px;
         display: inline-block;
@@ -53,8 +54,8 @@
         .desc {
             display: flex;
             background-color: rgb(44, 37, 35);
-            border-radius: 15px;
-            padding: 5px 15px;
+            border-radius: 1.5rem;
+            padding: 0.5rem 1.5rem;
             text-align: center;
             margin-bottom: 1.5rem;
             letter-spacing: 0.7px;
@@ -64,15 +65,15 @@
 
         .btn {
             cursor: pointer;
-            width: 150px;
+            width: 15rem;
             margin-bottom: 2rem;
-            padding: 15px 0;
+            padding: 1.5rem 0;
             border: 1px solid white;
             background-color: rgb(31, 26, 24);
             color: white;
             display: flex;
             justify-content: center;
-            font-size: 13px;
+            font-size: 1.3rem;
             letter-spacing: 0.7px;
 
             &:hover {
