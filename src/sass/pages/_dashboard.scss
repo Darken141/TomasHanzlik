@@ -1,0 +1,137 @@
+.dashboard-grid {
+    font-size: 1.4rem;
+
+    .header,
+    .footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 1.6rem;
+    }
+
+    .header {
+        position: relative;
+        z-index: 1;
+        box-shadow: 0px 0px 5px $color-primary-black;
+
+        &__logout {
+            cursor: pointer;
+            padding: 0.7rem;
+            border-radius: 1.5rem;
+
+            &:hover {
+                background-color: darken($color-green, 15);
+            }
+        }
+    }
+
+    .sidenav {
+        display: flex;
+        position: relative;
+        z-index: 1;
+        box-shadow: 1px 0px 5px $color-primary-black;
+        flex-direction: column;
+        
+        &__profile {
+            display: flex;
+            position: relative;
+            z-index: 2;
+            align-items: center;
+            padding: 1rem 1.5rem;
+            background-color: lighten($color-primary-black, 10);
+
+            &-img {
+                width: 8rem;
+                height: 8rem;
+                background-color: $color-green;
+                border-radius: 50%;
+                margin-right: 1.8rem;
+            }
+        }
+
+        &__list {
+            padding: 0;
+            margin-top: 2rem;
+            list-style: none;
+
+            &-item {
+                padding: 2rem 2rem 2rem 4rem;
+                display: flex;
+                align-items: center;
+
+                & :nth-child(1){
+                    margin-right: .6rem;
+                }
+
+                &:hover {
+                    cursor: pointer;
+                    background-color: lighten($color-primary-black, 10)
+                }
+
+                .dots {
+                    margin: 0 auto;
+                    letter-spacing: 2.5rem;
+                }
+            }
+        }
+    }
+
+    .main {
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            margin: 2rem;
+            padding: 2rem;
+            color: $color-white;
+            background-color: $color-secondary-black;
+            background: linear-gradient(to left, lighten($color-primary-black, 10), $color-primary-black);
+            border-radius: 1rem;
+            box-shadow: 0px 3px 8px $color-primary-black;
+        
+            &__heading {
+                letter-spacing: 0.8px;
+
+                &-primary {
+                    font-weight: lighter;
+                    margin-bottom: 1rem;
+
+                    .user {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+                }
+
+                &-secondary {
+                    font-weight: lighter;
+                }
+            }
+        }
+
+        .main-overview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(26.5rem, 1fr));
+            grid-gap: 2rem;
+            margin: 2rem;
+
+            .overviewcard {
+                cursor: pointer;
+                color: $color-white;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding: 2rem;
+                background: linear-gradient(to left, lighten($color-primary-black, 10), $color-primary-black);
+                box-shadow: 0px 3px 8px $color-primary-black;
+
+                &__icon {
+                    font-size: 13rem;
+                }
+
+                &__info {
+                    font-size: 2.2rem;
+                    letter-spacing: 1.5px;
+                }
+            }
+        }
+    }
+}

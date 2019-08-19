@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import HomePage from './pages/homepage/homepage.component';
 import SignInAndSignOut from './pages/sign-in-and-sign-out/sign-in-and-sign-out.component';
 import VideoEditor from './pages/video-editor/videopage.component';
+import Dashboard from './pages/dashboard/dashboard.component';
+
 import { auth, createUserProfileDocument } from './firebase/firebase.utils';
 import { setCurrentUser } from './redux/user/user.action';
 
@@ -26,7 +28,6 @@ class App extends React.Component {
           });
         });
       }
-      console.log(userAuth);
       setCurrentUser(userAuth)
     })
   }
@@ -49,7 +50,8 @@ class App extends React.Component {
             <SignInAndSignOut />
           ))}/>
           <Route path='/video' component={VideoEditor}/>
-          <Route path='/dashboard' component={VideoEditor}/>
+          <Route path='/dashboard' render={() => ( 
+            <Dashboard user={this.props.currentUser}/>)}/>
         </Switch>
       </BrowserRouter>
     );
