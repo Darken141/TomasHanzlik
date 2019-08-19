@@ -12,7 +12,7 @@ class VideoEditor extends React.Component {
       this.state = {
         serverData: 'http://localhost:3000/',
         id: '',
-        videoUrl: '',
+        videoUrl: 'https://www.youtube.com/watch?v=muE2B0Zylbw',
         videoDuration: '',
         videoProgress: '',
         isLogginIn: true,

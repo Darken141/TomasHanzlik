@@ -11,12 +11,12 @@
     z-index: -1;
 
     .log-off-btn {
-        position: absolute;
+        position: fixed;
         color: #fff;
         z-index: 999;
         top: 17px;
         right: 35px;
-        padding: 13px;
+        padding: 7px 13px;
         background-color: #000;
     }
 }

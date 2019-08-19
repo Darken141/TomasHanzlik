@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
+
 import ProductionList from '../../components/production-list/production-list.component';
 import CardContainer from '../../components/card-container/card-container.component';
 import { auth } from '../../firebase/firebase.utils';
@@ -19,11 +20,12 @@ const HomePage = (props) => {
             (<button className='log-off-btn' onClick={() => auth.signOut()}>
                 Odhlásiť sa
             </button>) :
-            null
+            null    
         }
+            <ProductionList />
         {
             hidden
-            ? <ProductionList />
+            ? null
             : <CardContainer />
         }
         </div>

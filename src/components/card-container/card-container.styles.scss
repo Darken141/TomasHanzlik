@@ -1,6 +1,18 @@
+.card-container-background{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .card-container {
     max-width: 500px;
-    margin: 25px 17px;
     position: relative;
     background-color: rgb(31, 26, 24);
     border: 1px solid #fff;
@@ -29,7 +41,8 @@
         text-align: center;
         font-weight: lighter;
         letter-spacing: 1.7px;
-        display: inline;
+        display: inline-block;
+        margin-bottom: 2rem;
     }
     
     .production {
@@ -46,6 +59,7 @@
             margin-bottom: 1.5rem;
             letter-spacing: 0.7px;
             font-size: 15px;
+            line-height: 1.5;
         }
 
         .btn {
@@ -63,6 +77,13 @@
 
             &:hover {
                 background-color: rgb(66, 57, 55);
+                transform: translateY(-3px);
+                box-shadow: 0px 10px 20px rgba(0,0,0,0.2);
+            }
+
+            &:active {
+                transform: translateY(-1px);
+                box-shadow: 0px 5px 10px rgba(0,0,0,0.2);
             }
         }
 

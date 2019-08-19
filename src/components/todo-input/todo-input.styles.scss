@@ -6,29 +6,25 @@
 
     .input {
         background-color: rgba(0, 0, 0, 0.5);
+        border: none;
         padding: 1rem;
         width: 100%;
         color: #fff;
-        height: 10px;
         outline: none;
     }
 
     .input-time {
         background-color: rgba(0, 0, 0, .5);
-        border-left: none;
         padding: 1rem;
         width: 35px;
         color: #fff;
-        height: 10px;
         outline: none;
         text-align: center;
     }
 
     & .btn-submit {
         background-color: rgba(0, 0, 0, .2);
-        border-left: none;
         width: 55px;
-        height: 46px;
         color: #fff;
         outline: none;
         text-align: center;

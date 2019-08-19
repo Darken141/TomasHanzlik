@@ -43,12 +43,13 @@ class App extends React.Component {
           <Route exact path='/' component={HomePage}/>
           <Route exact path='/signin' render={() => (
             this.props.currentUser ? (
-            <Redirect to='/'/>
+            <Redirect to='/video'/>
           ) 
           : (
             <SignInAndSignOut />
           ))}/>
           <Route path='/video' component={VideoEditor}/>
+          <Route path='/dashboard' component={VideoEditor}/>
         </Switch>
       </BrowserRouter>
     );
