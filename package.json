@@ -4,11 +4,13 @@
   "private": true,
   "homepage": "https://darken141.github.io/tomashanzlik-final/",
   "dependencies": {
+    "chart.js": "^2.8.0",
     "firebase": "^6.3.5",
     "framer-motion": "^1.5.0",
     "gh-pages": "^2.1.0",
     "node-sass": "^4.12.0",
     "react": "^16.8.6",
+    "react-chartjs-2": "^2.7.6",
     "react-device-detect": "^1.7.5",
     "react-dom": "^16.8.6",
     "react-icons": "^3.7.0",

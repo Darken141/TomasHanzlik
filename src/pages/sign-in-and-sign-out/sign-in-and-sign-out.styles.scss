@@ -1,8 +1,20 @@
 .sign-in-and-sign-out {
     display: flex;
-    width: 850px;
-    justify-content: space-between;
-    margin: 30px auto;
+    width: 100%;
+    justify-content: space-evenly;
+    margin: 3rem auto;
     color: rgb(255, 255, 255);
-    padding: 25px 35px;
+    padding: 2.5rem 3.5rem;
+
+    .infopanel {
+        display: flex;
+        justify-content: flex-start;
+        padding: 2rem 3rem;
+
+        &__heading-primary {
+            font-size: 2.2rem;
+            font-weight: lighter;
+            letter-spacing: 1.2px;
+        }
+    }
 }

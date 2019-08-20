@@ -16,8 +16,9 @@
 
         &__logout {
             cursor: pointer;
-            padding: 0.7rem;
+            padding: 0.7rem 1.3rem;
             border-radius: 1.5rem;
+            transition: all 0.3s;
 
             &:hover {
                 background-color: darken($color-green, 15);
@@ -26,7 +27,7 @@
     }
 
     .sidenav {
-        display: flex;
+        display: none;
         position: relative;
         z-index: 1;
         box-shadow: 1px 0px 5px $color-primary-black;
@@ -76,6 +77,130 @@
         }
     }
 
+    .main-video {
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 2rem;
+            padding: 2rem;
+            color: $color-white;
+            background-color: $color-secondary-black;
+            background: linear-gradient(to left, lighten($color-primary-black, 10), $color-primary-black);
+            border-radius: 1rem;
+            box-shadow: 0px 3px 8px $color-primary-black;
+        
+            &__heading {
+                letter-spacing: 0.8px;
+
+                &-primary {
+                    font-weight: lighter;
+                }
+            }
+
+            &__add-btn {
+                cursor: pointer;
+                background-color: darken($color-green, 10);
+                padding: 1.2rem 1.5rem;
+                border-radius: 2.5rem;
+                transition: all 0.3s;
+
+                &:hover {
+                    background-color: $color-green;
+                    transform: scale(1.1) translateY(-3px);
+                    box-shadow: 0px 3px 8px $color-primary-black;
+                }
+
+                &:active {
+                    transform: scale(1) translateY(-1px);
+                    box-shadow: 0px 1px 3px $color-primary-black;
+                }
+            }
+        }
+
+        .videocards {
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: wrap;
+
+            &__card {
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                align-items: center;
+                margin: 2rem;
+                padding: 2rem;
+                color: $color-white;
+                background-color: $color-secondary-black;
+                width: 30rem;
+                transition: all 0.3s;
+
+                &-video {
+                    width: 25rem;
+                    height: 15rem;
+                    background-color: $color-green;
+                    margin-bottom: 3rem;
+                }
+
+                &-title {
+                    font-weight: lighter;
+                    letter-spacing: 1.7px;
+                }
+
+                &:hover {
+                    transform: scale(1.05) translateY(-3px);
+                    box-shadow: 0px 3px 8px $color-primary-black;
+
+                }
+
+                &:active {
+                    transform: translateY(-1px);
+                    box-shadow: 0px 1px 4px $color-primary-black;
+                }
+            }
+        }
+    }
+
+    .main-charts {
+        overflow-y: scroll;
+        overflow-x: hidden;
+
+        .header-main {
+            display: flex;
+            flex-direction: column;
+            margin: 2rem;
+            padding: 2rem;
+            color: $color-white;
+            background-color: $color-secondary-black;
+            background: linear-gradient(to left, lighten($color-primary-black, 10), $color-primary-black);
+            border-radius: 1rem;
+            box-shadow: 0px 3px 8px $color-primary-black;
+        
+            &__heading {
+                letter-spacing: 0.8px;
+
+                &-primary {
+                    font-weight: lighter;
+                    margin-bottom: 3rem;
+                }
+            }
+        }
+
+        .charts-container {
+            display: flex;
+            justify-content: space-evenly;
+            flex-flow: wrap;
+
+            &__chart {
+                padding: 2rem;
+            }
+        }
+    }
+
     .main {
         .header-main {
             display: flex;
@@ -121,15 +246,27 @@
                 flex-direction: column;
                 padding: 2rem;
                 background: linear-gradient(to left, lighten($color-primary-black, 10), $color-primary-black);
-                box-shadow: 0px 3px 8px $color-primary-black;
+                transition: all 0.3s;
 
                 &__icon {
+                    color: $color-green;
                     font-size: 13rem;
                 }
 
                 &__info {
                     font-size: 2.2rem;
                     letter-spacing: 1.5px;
+                }
+
+                &:hover {
+                    transform: translateY(-3px);
+                    box-shadow: 0px 3px 8px $color-primary-black;
+
+                }
+
+                &:active {
+                    transform: translateY(-1px);
+                    box-shadow: 0px 1px 4px $color-primary-black;
                 }
             }
         }

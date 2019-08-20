@@ -1,17 +1,17 @@
 .dashboard-grid {
     display: grid;
-    grid-template-columns: 22rem 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 5rem 1fr 5rem;
     grid-template-areas: 
-    'sidenav header'
-    'sidenav main'
-    'sidenav footer';
+    'header'
+    'main'
+    'footer';
     height: 100vh; 
 
     .header {
         grid-area: header;
         background-color: $color-green;
-        background: linear-gradient(to right, $color-green, darken($color-green, 5));
+        background: linear-gradient(to right, $color-green, darken($color-green, 10));
     }
 
     .sidenav {
@@ -19,7 +19,7 @@
         background-color: $color-primary-black;
     }
 
-    .main {
+    [class^='main'] {
         color: $color-primary-black;
         grid-area: main;
         background-color: $color-white;
@@ -30,4 +30,3 @@
         background-color: darken($color-primary-black, 5)
     }
 }
-

@@ -9,6 +9,11 @@ const SignInAndSignOutPage = () => {
     return (
         <div className='sign-in-and-sign-out'>
             <SignIn />
+            <main className='infopanel'>
+                <h2 className='infopanel__heading-primary'>
+                    Informácie:
+                </h2>
+            </main>
         </div>
     )
 }
