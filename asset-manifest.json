@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/tomashanzlik-final/static/css/main.f6898c05.chunk.css",
+    "main.css": "/tomashanzlik-final/static/css/main.ffe18ac4.chunk.css",
     "main.js": "/tomashanzlik-final/static/js/main.1717d075.chunk.js",
     "main.js.map": "/tomashanzlik-final/static/js/main.1717d075.chunk.js.map",
     "runtime~main.js": "/tomashanzlik-final/static/js/runtime~main.89b7b771.js",
@@ -8,9 +8,9 @@
     "static/js/2.091a0c6a.chunk.js": "/tomashanzlik-final/static/js/2.091a0c6a.chunk.js",
     "static/js/2.091a0c6a.chunk.js.map": "/tomashanzlik-final/static/js/2.091a0c6a.chunk.js.map",
     "index.html": "/tomashanzlik-final/index.html",
-    "precache-manifest.309725703f6a9daa17f179440f3eaedb.js": "/tomashanzlik-final/precache-manifest.309725703f6a9daa17f179440f3eaedb.js",
+    "precache-manifest.9761b08cf445a3eeb0b2bd02fe5abf1b.js": "/tomashanzlik-final/precache-manifest.9761b08cf445a3eeb0b2bd02fe5abf1b.js",
     "service-worker.js": "/tomashanzlik-final/service-worker.js",
-    "static/css/main.f6898c05.chunk.css.map": "/tomashanzlik-final/static/css/main.f6898c05.chunk.css.map",
+    "static/css/main.ffe18ac4.chunk.css.map": "/tomashanzlik-final/static/css/main.ffe18ac4.chunk.css.map",
     "static/media/hanzlik_compress.jpg": "/tomashanzlik-final/static/media/hanzlik_compress.92830eed.jpg",
     "static/media/pozadie_compress.jpg": "/tomashanzlik-final/static/media/pozadie_compress.eb38b98b.jpg",
     "static/media/profile_picture.jpeg": "/tomashanzlik-final/static/media/profile_picture.ea26f850.jpeg",
