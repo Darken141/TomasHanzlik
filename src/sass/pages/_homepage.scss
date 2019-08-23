@@ -1,0 +1,112 @@
+.homepage {
+    font-size: 1.2rem;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+
+    &:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.55);
+    }
+
+    .production-list {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 2;
+
+        .production-card {
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 30rem;
+            height: 25rem;
+            margin: 2rem;
+            position: relative;
+            transition: all 0.3s;
+
+            &__image {
+                position: absolute;
+                z-index: -5;
+                width: 100%;
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+            }
+
+            &__title {
+                display: block;
+                position: absolute;
+                text-shadow: 0px 0px 5px darken($color-primary-black, 10),
+                    0px 0px 10px darken($color-primary-black, 10),
+                    0px 0px 15px darken($color-primary-black, 10);
+            }
+
+            &:hover{
+                box-shadow: 0px 0px 15px $color-white;
+            }
+
+            &__slide {
+                cursor: default;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                background-color: rgba(darken($color-primary-black, 10), 0.75);
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                align-items: center;
+                box-shadow: 0px 0px 15px $color-white;
+
+                &-description {
+                    text-align: center;
+                    padding: .9rem;
+                    margin: 0.7rem;
+                    border-radius: 2.5rem;
+                }
+
+                &-button {
+                    position: relative;
+                    width: 80%;
+                    cursor: pointer;
+                    color: $color-white;
+                    background-color: transparent;
+                    border: 1px solid $color-white;
+                    padding: 1.5rem;
+                    transition: all 0.3s;
+                    outline: none;
+
+                    &:hover {
+                        background-color: $color-white;
+                        color: $color-primary-black;
+                        transform: translateY(-3px);
+                        box-shadow: 0px 10px 20px $color-primary-black;
+                    }
+
+                    &:active {
+                        color: $color-white;
+                        background-color: $color-primary-black;
+                        transform: translateY(-1px);
+                        box-shadow: 0px 5px 10px $color-primary-black;
+                    }
+                }
+            }
+        }
+    }
+}

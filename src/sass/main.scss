@@ -8,8 +8,11 @@
 @import 'base/utilities';
 
 @import 'layout/dashboard-layout';
+@import 'layout/videopage-layout';
 
+@import 'pages/homepage';
 @import 'pages/dashboard';
+@import 'pages/videopage';
 
 @media only screen and (min-width: 46.875em) {
     /* Show the sidenav */
@@ -26,3 +29,31 @@
         }
     }
   }
+
+  @media only screen and (min-width: 46.875em) {
+    /* Show the sidenav */
+    .videopage-grid {
+      grid-template-columns: 1fr 30rem; /* Show the side nav for non-mobile screens */
+      grid-template-rows: 5rem 1fr;
+      grid-template-areas:
+        'header header'
+        'video sidenav';
+        
+        .header {
+          &__menu {
+            display: none;
+          }
+        }
+
+        .todo-list {
+          display: flex;
+          flex-direction: column;
+        }
+    }
+  }
+
+@media all and (max-width: 680px) {	
+    .production-list{	
+        flex-direction: column;	
+    }
+}

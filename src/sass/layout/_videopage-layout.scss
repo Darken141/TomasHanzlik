@@ -1,0 +1,28 @@
+.videopage-grid {
+    color: $color-white;
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 5rem 1fr 1fr;
+
+    grid-template-areas:
+    'header'
+    'video'
+    'sidenav';
+
+    .header {
+        grid-area: header;
+        background: linear-gradient(to right, $color-green, darken($color-green, 10))
+    }
+
+    .video-section {
+        grid-area: video;
+        background-color: $color-primary-black;
+    }
+
+    .todo-list {
+        display: none;
+        grid-area: sidenav;
+        background-color: $color-secondary-black;
+    }
+}

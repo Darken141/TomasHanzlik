@@ -1,74 +1,82 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { connect } from 'react-redux';
-import { openProductionContainer } from '../../redux/production/production.actions';
+import React, { useState } from 'react';
+import { animated, Transition, Spring } from 'react-spring/renderprops';
 
-import './production-card.styles.scss';
+const ProductionCard = ({ id, img, name, text, hidden }) => {
+    const [ showComponent, changeShowComponent ] = useState(false);
 
-const ProductionCard = (props) => {
-
-        return (      
-            <motion.div 
-                onClick={() => props.openProductionContainer(props)}
-                className="production-card"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{duration: 1}}
-                whileHover={{ 
-                    scale: 1.1, 
-                    boxShadow: '0px 0px 15px #fff'
+    return (     
+        <div 
+            className="production-card"
+            onClick={() => {
+                changeShowComponent(!showComponent)            
+            }}
+        >
+        <div 
+            className='production-card__image'
+                style={{
+                    backgroundImage: `url(${img})`
                 }}
-            >
-                <div 
-                    className='production-image'
-                    style={{
-                        backgroundImage: `url(${props.img})`
-                    }}
-                /> 
-                <motion.div 
-                    className='hover-background' 
-                    initial={{opacity:0}}
-                    animate={{ opacity: .5, backgroundColor: '#000'}}
-                    transition={{duration: 1}}
-                />
-                    
-                <motion.h1 
-                    className='card-title'
-                    initial={{ opacity: 0}}
-                    animate={{ opacity: 1}}
-                    transition={{delay: 0.5, duration: 1.5}}
+            />
+            {showComponent ? null : (
+                <h1 className='production-card__title'>
+                    {name}
+                </h1>
+            )}
+
+            <Transition
+                native
+                items={showComponent}
+                from={{ opacity: 0, width: '100%'}}
+                enter={{ opacity: 1, width: '100%'}}
+                leave={{ opacity: 0, width: '100%'}}
+                config={{ duration: 500}}
                 >
-                    {props.name}
-                </motion.h1>
-                <motion.div 
-                    className="card-content"
-                    initial={{ opacity: 0}} 
-                    whileHover={{ opacity: 1}} 
-                    transition={{ duration: 1.5}}    
-                >
-                    <motion.p 
-                        className='card-text'
+                {show => show && (props => (
+                <animated.div style={props} className='second-div'>
+                    <Spring
+                    from={{opacity: 0}}
+                    to={{opacity: 1}}
+                    config={{duration: 500}}
                     >
-                        {props.text}
-                    </motion.p>
-                </motion.div>
-            </motion.div>
-                    
-        )
-    }
+                    { props => (
+                        <div style={props} className='production-card__slide'>
+                            <div className="production-card__slide-description">
+                                {text}
+                            </div>
+                            <Spring
+                                from={{opacity: 0}}
+                                to={{ opacity: 1}}
+                                config={{delay: 500}}
+                            >
+                            { props => (
+                                <button style={props} className='production-card__slide-button'>
+                                    Preist na web
+                                </button>
+                            )}
 
+                            </Spring>
+                        </div>
+                    )}
+                    </Spring>
+                </animated.div>
+                ))}
+            </Transition>
+            </div>
             
-const mapDispatchToProps = dispatch => ({
-    openProductionContainer: (production) => dispatch(openProductionContainer(production))
-})
+    )
+}
 
-export default connect(null, mapDispatchToProps)(ProductionCard);
 
-/*
-                <motion.a 
-                    className='production-link' 
-                    rel="noopener noreferrer" 
-                    href={props.url} 
-                    target="_blank"
-                >
-                */
+export default ProductionCard;
+    // {
+    //     showComponent ? (
+    //     <div className='production-card__slide'>
+    //         <div className="production-card__slide-description">
+    //             {text}
+    //         </div>
+    //         <button className='production-card__slide-button'>
+    //             Preist na web
+    //         </button>
+    //     </div>
+    //     ) : null
+    // }

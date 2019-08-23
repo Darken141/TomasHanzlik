@@ -8,8 +8,6 @@ import stuzkova from '../../images/stuzkova-v3-compress.jpg';
 import visuals from '../../images/visuals_compress.png';
 
 const INITIAL_STATE = {
-    hidden: true,
-    production: null,
     backgroundImg: backGroundImg,
     productions: [
         {
@@ -18,7 +16,8 @@ const INITIAL_STATE = {
             text: "Hlavná a zároveň všeobecne zameraná produkcia na tvorenie videoklipov, reklamných videi, aftermovie's a podobne zameraných videí.",
             img: hanzlik_sk,
             url: 'http://hanzlik.sk/',
-            video: 'https://www.youtube.com/watch?v=l4qVw8OxjHc'
+            video: 'https://www.youtube.com/watch?v=l4qVw8OxjHc',
+            hidden: false
         },
         {
             id: 2,
@@ -26,7 +25,8 @@ const INITIAL_STATE = {
             text: "Produkcia zameraná na tvorbu profesionálnych videí zo Stužkových slávností. Produkcia poskytuje rôzne balíčky pre študentov.",
             img: stuzkova,
             url: 'http://hanzlik.sk/',
-            video: 'https://vimeo.com/306579567'
+            video: 'https://vimeo.com/306579567',
+            hidden: false
         },
         {
             id: 3,
@@ -34,7 +34,8 @@ const INITIAL_STATE = {
             text: "Produkcia zameraná na tvorbu profesionálnych svadobných videí. Produkcia disponuje rozsiahlym tímom kameramanov.",
             img: svadobna,
             url: 'http://svadobnaprodukcia.sk/',
-            video: 'https://vimeo.com/307993308'
+            video: 'https://vimeo.com/307993308',
+            hidden: false
         },
         {
             id: 4,
@@ -42,25 +43,21 @@ const INITIAL_STATE = {
             text: "Produkcia zameraná na tvorbu a predaj vizuálov a 'one take' videoklipov.",
             img: visuals,
             url: 'https://www.instagram.com/visualsforsale/?fbclid=IwAR1EA4kAXCKIMJn5bSt72v7vwMDu0FjxFtQNi9XhHk1myfT_RWf6gIp3qv4',
-            video: ''
+            video: '',
+            hidden: false
         }
     ]
 }
 
 const productionReducer = (state = INITIAL_STATE, action) => {
     switch(action.type) {
-        case ProductionActionTypes.CLOSE_PRODUCTION_CONTAINER:
+        case ProductionActionTypes.SHOW_PRODUCTION_CONTAINER:
             return {
                 ...state,
-                hidden: true,
-                production: null
-            }
-
-        case ProductionActionTypes.OPEN_PRODUCTION_CONTAINER:
-            return {
-                ...state,
-                hidden: false,
-                production: action.payload
+                productions: {
+                    ...state.productions,
+                    hidden: true
+                }
             }
 
         default:

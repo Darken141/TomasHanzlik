@@ -14,7 +14,10 @@ import {
 import DashHome from '../../components/dashboard-home/dashboard-home.component';
 import DashCharts from '../../components/dashboard-charts/dashboard-charts.component';
 import DashVideo from '../../components/dashboard-video/dashboard-video.component';
-    
+import DashVideoContainer from '../../components/dashboard-video/dashboard-video-container';
+
+import profileImg from '../../images/profile_picture.jpeg';
+     
 const Dashboard = () => (
         <div className='dashboard-grid'>
             <header className='header'>
@@ -29,7 +32,7 @@ const Dashboard = () => (
             </header>
             <aside className='sidenav'>
                 <div className='sidenav__profile'>
-                    <div className='sidenav__profile-img'/>
+                    <img src={profileImg} alt='profile_picture' className='sidenav__profile-img'/>
                     <div className='sidenav__profile-name'>User</div>
                 </div>
                 <ul className='sidenav__list'>
@@ -75,7 +78,8 @@ const Dashboard = () => (
             <Switch>
                 <Route exact path='/dashboard' component={DashHome}/>
                 <Route path='/dashboard/charts' component={DashCharts}/>
-                <Route path='/dashboard/video' component={DashVideo}/>
+                <Route exact path='/dashboard/video' component={DashVideo}/>
+                <Route path='/dashboard/video/:id' component={DashVideoContainer}/>
             </Switch>
             <footer className='footer'>
                 <div className='footer__copyright'>&copy; 2019 CoderKin</div>

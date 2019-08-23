@@ -4,10 +4,12 @@ import productionReducer from './production/production.reducer';
 import signInReducer from './sign-in/sign-in.reducer';
 import signUpReducer from './sign-up/sign-up.reducer';
 import userReducer from './user/user.reducer';
+import videoEditorReducer from './video/video-editor.reducer';
 
 export default combineReducers({
     production: productionReducer,
     signIn: signInReducer,
     signUp: signUpReducer,
-    user: userReducer
+    user: userReducer,
+    video: videoEditorReducer
 })

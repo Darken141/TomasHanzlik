@@ -1,5 +1,9 @@
 import React from 'react';
 
+import Video from '../../components/video/video.component';
+
+import { Link } from 'react-router-dom';
+
 const DashVideo = () => (
     <main className='main-video'>
         <div className='header-main'>
@@ -15,16 +19,22 @@ const DashVideo = () => (
 
         <div className='videocards'>
             <div className='videocards__card'>
-                <div className='videocards__card-video'/>
-                <h3 className='videocards__card-title'>Video Title</h3>
+                <Video video={'https://vimeo.com/308797532'} className='videocards__card-video'/>
+                <Link to='/dashboard/video/:id'>
+                    <h3 className='videocards__card-title'>Video Title</h3>
+                </Link>
             </div>
             <div className='videocards__card'>
-                <div className='videocards__card-video'/>
-                <h3 className='videocards__card-title'>Video Title</h3>
+                <Video video={'https://vimeo.com/308797532'} className='videocards__card-video'/>
+                <Link to='/dashboard/video/:id'>
+                    <h3 className='videocards__card-title'>Video Title</h3>
+                </Link>
             </div>
             <div className='videocards__card'>
-                <div className='videocards__card-video'/>
-                <h3 className='videocards__card-title'>Video Title</h3>
+                <Video video={'https://vimeo.com/308797532'} className='videocards__card-video'/>
+                <Link to='/dashboard/video/:id'>
+                    <h3 className='videocards__card-title'>Video Title</h3>
+                </Link>
             </div>
         </div>
     </main>

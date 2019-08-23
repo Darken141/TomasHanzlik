@@ -1,121 +1,70 @@
 import React from 'react';
 
+import { auth } from '../../firebase/firebase.utils';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { showMenu } from '../../redux/video/video-editor.actions';
+
+import TodoContainer from '../../components/todo-container/todo-container.component';
+
 import Video from '../../components/video/video.component';
-import TodoItem from '../../components/todo-item/todo-item.component';
-import TodoInput from '../../components/todo-input/todo-input.component';
+import { 
+  FaBars
+} from 'react-icons/fa';
 
-import './videopage.styles.scss'
-
-class VideoEditor extends React.Component {
-    constructor(){
-      super();
-      this.state = {
-        serverData: 'http://localhost:3000/',
-        id: '',
-        videoUrl: 'https://www.youtube.com/watch?v=muE2B0Zylbw',
-        videoDuration: '',
-        videoProgress: '',
-        isLogginIn: true,
-        isPlaying: false,
-        addTodo: '',
-        addTime: '',
-        todos: []
-      }
-    }
-    
-
-    componentDidMount() {
-      this.getVideo(1);
-      this.getTodos();
-    }
-      
-    getVideo = (id) => {
-      console.log('searching for the video');
-      fetch(this.state.serverData + 'get-video', {
-        method: 'post',
-        headers: {'Content-Type' : 'application/json'},
-        body: JSON.stringify({
-          id: id,
-        })
-      })
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ videoUrl: data[0].video});
-      })
-    }
-
-    getTodos = () => {
-      fetch(this.state.serverData + 'get-todo')
-      .then(response => response.json())
-      .then(todos => {
-        this.setState({todos: todos})
-      });
-    }
-  
-    onInputChange = event => {
-      this.setState({addTodo: event.target.value})
-    }
-
-    onTimeInputChange = event => {
-      this.setState({addTime: event.target.value})
-    }
-
-    handleCLickButton = () => {
-      const { addTime, addTodo } = this.state;
-      if (addTime !== '' && addTodo !== ''){
-        fetch(this.state.serverData + 'add-todo', {
-          method: 'post',
-          headers: {'Content-Type' : 'application/json'},
-          body: JSON.stringify({
-            time: addTime,
-            text: addTodo
-          })
-        })
-        .then(response => response.json())
-        .then(() => {
-          this.getTodos();
-          this.setState({addTime: '', addTodo: ''})
-        });
-      } else {
-        alert('Vložte pripomienku a čas')
-      }
-    }
-
-    handleCLickDelButton = (id) => {
-      fetch(this.state.serverData + 'delete-todo', {
-        method: 'post',
-        headers: {'Content-Type' : 'application/json'},
-        body: JSON.stringify({
-          id: id
-        })
-      })
-      .then(response => response.json())
-      .then(() => {this.getTodos()});
-    }
-
-    render() {
-      return (
-        <div className='video-section'>
-          <div className='container'>
-            <Video video={this.state.videoUrl}/>
-            <div className='todolist'>
-              <TodoInput
-                addTime={this.state.addTime}
-                addTodo={this.state.addTodo}
-                handleCLick={this.handleCLickButton}
-                onInputChange={this.onInputChange}
-                onTimeInputChange={this.onTimeInputChange}
-              />
-              <div className='list'>
-                {this.state.todos.map(({id, ...otherTodoProps}) => (
-                  <TodoItem key={id} {...otherTodoProps} handleCLickDelButton={() => this.handleCLickDelButton(id)} />
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-      )
-    }
+const data = {
+  serverData: 'http://localhost:3000/',
+  id: '',
+  videoUrl: 'https://vimeo.com/308797532',
+  videoDuration: '',
+  videoProgress: '',
+  isLogginIn: true,
+  isPlaying: false,
+  addTodo: '',
+  addTime: '',
+  todos: []
 }
 
-export default VideoEditor;
+const VideoEditor = ({showMenu}) => (
+  <div className='videopage-grid'>
+
+    <header className='header'>
+      <div className='header__user'>Ahoj User</div>
+      <div className='header__buttons'>
+        <Link
+          to='/'
+          className='header__logout'
+          onClick={() => auth.signOut()}
+        >
+          Odhlásiť
+        </Link>
+        <div className='header__menu'>
+          <div className='header__menu-icon'><FaBars/></div>
+          <div 
+            className='header__menu-text'
+            onClick={showMenu}
+          >
+            MENU
+          </div>
+        </div>
+      </div>
+    </header>
+    <main className='video-section'>
+      <div className='video-section__video'>
+        <Video video={data.videoUrl}/>
+      </div>
+      <div className='video-section__infopanel'>
+        <h2 className='video-section__infopanel-heading'>
+          Video Title
+        </h2>
+      </div>
+    </main>
+    <TodoContainer />
+  </div>
+)
+
+const mapDispatchToProps = dispatch => ({
+  showMenu: () => dispatch(showMenu())
+})
+
+export default connect(null, mapDispatchToProps)(VideoEditor);
